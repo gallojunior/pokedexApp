@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     resizeMode: 'cover'
   },
   titleContainer: {
-    paddingHorizontal: 15
+    paddingHorizontal: 20
   },
   title: {
     fontSize: 32,

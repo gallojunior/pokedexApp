@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header';
-import Card from './src/components/Card';
-import { pokemons } from './src/data/pokemons';
+import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
+import Header from '../components/Header';
+import Card from '../components/Card';
+import { pokemons } from '../data/pokemons';
 
 export default function Home() {
   const renderPokemon = ({ item }) => (
-    <Card pokemon={item} />
+    <Card key={item.Numero} pokemon={item} />
   );
 //<Link href={{pathname: "details", params:{ number: 10} }}>Details</Link>
   return (
@@ -16,7 +16,9 @@ export default function Home() {
         data={pokemons}
         style={styles.cards}
         keyExtractor={(pokemon) => pokemon.Numero.toString() }
-        renderItem={renderPokemon}>
+        renderItem={renderPokemon}
+        contentContainerStyle={{ paddingBottom: 20}}
+      >
       </FlatList>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -30,7 +32,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   cards: {
-    padding: 15,
+    padding: 20,
     marginBottom: 30,
+    paddingBottom: 20,
   }
 });
