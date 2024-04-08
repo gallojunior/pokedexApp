@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { useLocalSearchParams } from 'expo-router'
 
 export default function details() {
+  const params = useLocalSearchParams();
+  console.log(params);
   return (
     <View style={styles.container}>
-      <Text>details</Text>
+      <Text>Details</Text>
     </View>
   )
 }

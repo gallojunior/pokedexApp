@@ -4,11 +4,11 @@ import Header from './src/components/Header';
 import Card from './src/components/Card';
 import { pokemons } from './src/data/pokemons';
 
-export default function Home() {
+export default function App() {
   const renderPokemon = ({ item }) => (
     <Card pokemon={item} />
   );
-//<Link href={{pathname: "details", params:{ number: 10} }}>Details</Link>
+
   return (
     <SafeAreaView style={styles.container}>
       <Header />
