@@ -4,14 +4,13 @@ import { styles } from './styles';
 import Button from '../Button';
 import { POKEMON_TYPE_COLORS } from '../../utils/colors';
 
+function handleNavigate(numero) {
+  router.push(`/details/${numero}`);
+}
+
 export default function Card({ pokemon }) {
-
-  function navigate(numero) {
-    router.push(`/details/${numero}`);
-  }
-
   return (
-    <Pressable onPress={navigate(pokemon.Numero)}>
+    <Pressable onPress={() => handleNavigate(pokemon.Numero)}>
       <View style={[styles.container, { backgroundColor: `${POKEMON_TYPE_COLORS[pokemon.Tipo[0].Nome]}` }]}>
         <View style={styles.info}>
           <Text style={styles.numero}>#{pokemon.Numero}</Text>
