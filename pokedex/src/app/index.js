@@ -8,7 +8,6 @@ export default function Home() {
   const renderPokemon = ({ item }) => (
     <Card key={item.Numero} pokemon={item} />
   );
-//<Link href={{pathname: "details", params:{ number: 10} }}>Details</Link>
   return (
     <SafeAreaView style={styles.container}>
       <Header />
