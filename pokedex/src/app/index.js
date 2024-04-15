@@ -10,7 +10,7 @@ export default function Home() {
   );
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header title="Pokédex" />
       <FlatList
         data={pokemons}
         style={styles.cards}

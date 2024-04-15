@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="details/[numero]" options={{ title: "Pokemon" }} />
+      <Stack.Screen name="details/[numero]" options={{ headerShown: false }} />
     </Stack>
   );
 }

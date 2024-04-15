@@ -16,11 +16,15 @@ export const styles = StyleSheet.create({
     resizeMode: 'cover'
   },
   titleContainer: {
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
   },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    marginTop: -10
+    marginTop: -10,
+    marginBottom: 10,
   },
 })
